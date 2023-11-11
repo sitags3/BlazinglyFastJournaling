@@ -1,7 +1,13 @@
 
 
 
-const journalEntries = [
+export type JournalEntries = {
+    id: number;
+    title: string;
+    body: string;
+}[]
+
+export const journalEntries: JournalEntries = [
     {
         id: 0,
         title: "Entry 1",
@@ -29,6 +35,16 @@ const journalEntries = [
     },
     {
         id: 5,
+        title: "Entry 6",
+        body: "Pain",
+    },
+    {
+        id: 6,
+        title: "Entry 6",
+        body: "Pain",
+    },
+    {
+        id: 7,
         title: "Entry 6",
         body: "Pain",
     },
