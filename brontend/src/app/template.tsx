@@ -8,9 +8,9 @@ type Props = {
 const Template: FC<Props> = ({ children }) => {
     return (
         <>
-            <Header/>
+            {/* <Header/> */}
             <div>{children}</div>
-            <Footer/>
+            {/* <Footer/> */}
         </>
     )
 }

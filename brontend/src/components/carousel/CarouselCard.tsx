@@ -1,4 +1,5 @@
 import './card.scss';
+import '../base.scss'
 
 const CarouselCard = () => {
     return (

@@ -4,7 +4,6 @@ const Home = () => {
 
   return (
     <main>
-      Journal page
       <CarouselCard />
     </main>
   )

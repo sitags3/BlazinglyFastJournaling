@@ -1,17 +1,5 @@
 @use "../base.scss";
 
-.main-text {
-    font-family: base.$main-font;
-    color: base.$color-text;
-    z-index: 1;
-}
-
-.btn-1 {
-    font-size: 1.25rem;
-    border: solid 1px base.$color-text;
-    padding: 1rem 5.5rem;
-}
-
 .card {
     background-color: base.$color-back;
     border: solid 1px base.$color-text;
