@@ -34,13 +34,18 @@ const SurveyCard = () => {
                 <span className="weekday main-text">
                     Today
                 </span>
-                <svg className='mt-[20px] relative top-[20px]' width="700" height="1" viewBox="0 0 700 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className='mt-[20px] relative top-[20px]' width="670" height="1" viewBox="0 0 700 1" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <line y1="0.5" x2="700" y2="0.5" stroke="black" />
                 </svg>
                 <form className='flex gap-[30px]'>
                     {numbers.map(num => {
                         return (
-                            <input type='radio' name='painrate' value={num} className='bg-white z-10 rounded-full border border-solid border-black w-[40px] h-[40px] text-sm flex items-center justify-center'/>
+                            <label key={num} className='relative cursor-pointer bg-white z-10 rounded-full w-[40px] h-[40px] border border-solid border-stone-500  text-sm flex items-center justify-center'>
+                                <input type='radio' name='painrate' value={num} className='hidden absolute' />
+                                <div className='transition-size label-checked:p-5 label-checked:px-6 duration-700 flex flex-col justify-center self-center text-center label-checked:bg-neutral-200 label-checked:text-[#666666] rounded-full '>
+                                    {num}
+                                </div>
+                            </label>
                         )
                     })}
                 </form>
