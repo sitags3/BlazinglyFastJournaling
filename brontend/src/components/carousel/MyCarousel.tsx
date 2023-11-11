@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import './MyCarousel.scss'
 import { JournalEntries, journalEntries } from '@/data';
 import ArrowIcon from '../arrow-icon/ArrowIcon';
+import CarouselCard from './CarouselCard';
 
 type CarouselProps = {
     items: JournalEntries;
@@ -19,19 +20,20 @@ const Carousel = ({ items, active }: CarouselProps) => {
     });
 
     const moveLeft = () => {
-        const newActive = state.active - 1;
+        const newActive = (state.active + 1) % items.length;
+
         setState({
             ...state,
-            active: newActive < 0 ? items.length - 1 : newActive,
+            active: newActive,
             direction: 'left',
         });
     }
 
     const moveRight = () => {
-        const newActive = (state.active + 1) % items.length;
+        const newActive = state.active - 1;
         setState({
             ...state,
-            active: newActive,
+            active: newActive < 0 ? items.length - 1 : newActive,
             direction: 'right',
         });
     }
@@ -48,20 +50,22 @@ const Carousel = ({ items, active }: CarouselProps) => {
                 index = i % items.length;
             }
             level = state.active - i;
-            itemsArray.push(<Item key={index} id={items[index].id} level={level} />);
+            itemsArray.push(
+                <CarouselCard key={index} journalEntry={items[index]} level={level} />
+            );
         }
         return itemsArray;
     };
 
     return (
-        <div className="noselect h-[350px] mx-auto w-[510px] flex flex-row">
+        <div className="noselect h-[350px] mx-auto w-[910px] flex flex-row">
             <ArrowIcon rotate={true} onClick={moveLeft} />
             <div className='grow mt-14'>
 
                 <div className='relative w-fit'>
-                    <Item level={-2} empty={true}></Item>
+                    <CarouselCard level={-2}/>
                     {generateItems()}
-                    <Item level={2} empty={true}></Item>
+                    <CarouselCard level={2}/>
                 </div>
             </div>
             <ArrowIcon rotate={false} onClick={moveRight} />
@@ -72,7 +76,6 @@ const Carousel = ({ items, active }: CarouselProps) => {
 
 const Item = ({ id, level, empty }: any) => {
     let className = 'item border border-black border-solid ';
-    console.log(level)
     switch (level) {
         case -2:
             className += 'left-0 scale-90 bg-[#228291] z-10';
