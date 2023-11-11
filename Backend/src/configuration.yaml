@@ -1,0 +1,4 @@
+# configuration.yaml
+application_port: 8000
+database:
+  database_path: "/Backend/blazingly_fast.db"
