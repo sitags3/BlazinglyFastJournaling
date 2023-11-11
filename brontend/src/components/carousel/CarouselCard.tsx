@@ -4,6 +4,7 @@ import { FC } from 'react';
 import './card.scss';
 import { JournalEntry } from '@/data';
 
+import '../base.scss'
 type Props = {
     journalEntry?: JournalEntry;
     level: number;

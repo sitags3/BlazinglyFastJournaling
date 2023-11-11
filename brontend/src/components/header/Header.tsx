@@ -5,14 +5,13 @@ type Props = {}
 
 const links = [
     '/',
+    '/carousel',
     '/journal',
-    'carousel'
 ]
 
 const Header: FC<Props> = () => {
     return (
         <header className="flex gap-10 space-x-10">
-            this is header
             {links.map(link => {
                 return (
                     <Link key={link} className="p-4 bg-yellow-100" href={link}>{link}</Link>

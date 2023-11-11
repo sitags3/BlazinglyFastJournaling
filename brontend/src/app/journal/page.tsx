@@ -5,7 +5,6 @@ const Home = () => {
 
   return (
     <main>
-      Journal page
       <CarouselCard journalEntry={journalEntries[4]} level={0}/>
     </main>
   )
