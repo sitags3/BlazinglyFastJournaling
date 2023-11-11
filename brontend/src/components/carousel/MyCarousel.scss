@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster');
 
 body {
-    background-color: #89FAD0;
-    font-family: 'Lobster';
-    margin: 0;
-    max-height: 100vh;
+    // background-color: #89FAD0;
+    // font-family: 'Lobster';
+    // margin: 0;
+    // max-height: 100vh;
     overflow-y: hidden;
 }
 
@@ -39,14 +39,14 @@ body {
     left: 780px;
 }
 
-.item {
+// .item {
     // height: 200px;
     // color: black;
     // text-align: center;
     // font-size: 40px;
     // position: absolute;
     // transition: height 1s, width 1s, left 1s, margin-top 1s, line-height 1s, background-color 1s;
-}
+// }
 .transition {
     transition: height 1s, width 1s, left 1s, margin-top 1s, line-height 1s, background-color 1s;
 

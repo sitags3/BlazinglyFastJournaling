@@ -7,6 +7,7 @@ const links = [
     '/',
     '/carousel',
     '/journal',
+    '/survey',
 ]
 
 const Header: FC<Props> = () => {
