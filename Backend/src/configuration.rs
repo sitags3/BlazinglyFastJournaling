@@ -1,16 +1,16 @@
-//! src/configuration.rs
-#[derive(serde::Deserialize)]
-pub struct Settings {
-    pub database: DatabaseSettings,
-    pub application_port: u16,
-}
-#[derive(serde::Deserialize)]
-pub struct DatabaseSettings {
-    pub database_path: String,
-}
+// //! src/configuration.rs
 
-pub fn get_configuration() -> Result<Settings, config::ConfigError> {
-    let mut settings = config::Config::default();
-    settings.merge(config::File::with_name("configuration"))?;
-    settings.try_into()
-}
+// use config::{Config, File, FileFormat};
+// #[derive(serde::Deserialize)]
+// pub struct Settings {
+//     pub database_path: String,
+//     pub application_port: u16,
+// }
+
+// pub fn get_configuration() -> Result<Settings, config::ConfigError> {
+//     let config = Config::builder()
+//         .add_source(File::new("../configuration.yaml", FileFormat::Yaml))
+//         .build()?;
+//     let final_settings = config.try_deserialize::<Settings>()?;
+//     Ok(final_settings)
+// }
