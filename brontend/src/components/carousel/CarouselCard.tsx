@@ -48,7 +48,9 @@ const CarouselCard: FC<Props> = ({ journalEntry, level, className = "" }) => {
             {journalEntry ?
                 <>
                     <div className='date-circle rounded-full'></div>
-                    <span className="weekday main-text">{journalEntry.when}</span>
+                    <span className="weekday main-text">
+                        {journalEntry.when}
+                    </span>
                     <div className="date-container">
                         <span className="day main-text">{journalEntry.day}</span>
                         <span className="month main-text">{journalEntry.month}</span>

@@ -1,3 +1,8 @@
+import './surveyCard.scss'
+import '../base.scss'
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
 const SurveyCard = () => {
     return (
         <div>
@@ -25,6 +30,23 @@ const SurveyCard = () => {
                     </filter>
                 </defs>
             </svg>
+            <div className="survey-card">
+                <span className="weekday main-text">
+                    Today
+                </span>
+                <svg className='mt-[20px] relative top-[20px]' width="700" height="1" viewBox="0 0 700 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line y1="0.5" x2="700" y2="0.5" stroke="black" />
+                </svg>
+                <div className='flex gap-[30px]'>
+                    {numbers.map(num => {
+                        return (
+                            <div className='bg-white z-10 rounded-full border border-solid border-black w-[40px] h-[40px] text-sm flex items-center justify-center'>
+                                {num}
+                            </div>
+                        )
+                    })}
+                </div>
+            </div>
         </div>
     )
 }
