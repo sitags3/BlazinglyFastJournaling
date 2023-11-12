@@ -8,6 +8,7 @@ export type JournalEntry = {
     when: string;
     title: string;
     body: string;
+    filled: boolean
 }
 export type JournalEntries = JournalEntry[]
 
@@ -19,6 +20,7 @@ export const journalEntries: JournalEntries = [
         when: 'Today',
         title: "Entry 1",
         body: "Pain",
+        filled: false
     },
     {
         id: 1,
@@ -27,6 +29,7 @@ export const journalEntries: JournalEntries = [
         when: 'Yesterday',
         title: "Entry 2",
         body: "Pain",
+        filled: false
     },
     {
         id: 2,
@@ -35,6 +38,7 @@ export const journalEntries: JournalEntries = [
         when: 'Thursday',
         title: "Entry 3",
         body: "Pain",
+        filled: false
     },
     {
         id: 3,
@@ -43,6 +47,7 @@ export const journalEntries: JournalEntries = [
         when: 'Wednesday',
         title: "Entry 4",
         body: "Pain",
+        filled: false
     },
     {
         id: 4,
@@ -51,6 +56,7 @@ export const journalEntries: JournalEntries = [
         when: 'Tuesday',
         title: "Entry 5",
         body: "Pain",
+        filled: false
     },
     {
         id: 5,
@@ -59,6 +65,7 @@ export const journalEntries: JournalEntries = [
         when: 'Monday',
         title: "Entry 6",
         body: "Pain",
+        filled: false
     },
     {
         id: 6,
@@ -67,6 +74,7 @@ export const journalEntries: JournalEntries = [
         when: 'Sunday',
         title: "Entry 6",
         body: "Pain",
+        filled: false
     },
     {
         id: 7,
@@ -75,5 +83,6 @@ export const journalEntries: JournalEntries = [
         when: 'Saturday',
         title: "Entry 6",
         body: "Pain",
+        filled: false
     },
 ];

@@ -31,3 +31,7 @@ $main-font: 'Inter', sans-serif;
     color: $color-text;
     z-index: 1;
 }
+
+body {
+    overflow: hidden;
+}
