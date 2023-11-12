@@ -8,6 +8,7 @@ const links = [
     '/carousel',
     '/journal',
     '/survey',
+    '/result',
 ]
 
 const Header: FC<Props> = () => {

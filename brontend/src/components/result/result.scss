@@ -1,0 +1,21 @@
+@use '../base.scss';
+
+.result-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+    gap: 70px;
+    padding: 100px;
+}
+
+.result-header {
+    color: base.$color-text;
+    font-family: base.$title-font;
+    font-size: 2.5rem;
+}
+
+.result-text {
+    text-align: justify;
+    font-family: base.$main-font;
+    color: base.$color-text;
+}
