@@ -7,14 +7,15 @@ import '../base.scss'
 import Body from '../body/Body.jsx'
 import SurveyCard2 from './SurveyCard2';
 import { FormEventHandler } from 'react'
+import { useRouter } from 'next/navigation'
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 const SurveyCard = () => {
-
+    const router = useRouter();
     const handleSubmit = (event: any) => {
         event.preventDefault();
-
+        router.push('/carousel')
     }
 
     return (
